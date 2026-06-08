@@ -1,0 +1,24 @@
+[project]
+name = "vbmeta-generator"
+version = "1.0.0"
+description = "Generate signed AVB vbmeta images for custom Android ROMs"
+requires-python = ">=3.10"
+dependencies = [
+    "rich",
+]
+
+[project.scripts]
+vbmeta-generator = "vbmeta_generator.cli:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["vbmeta_generator*"]
+
+[tool.setuptools.package-data]
+vbmeta_generator = ["bin/*", "lib64/*"]
+
+[tool.uv.sources]
+rich = { git = "https://github.com/Textualize/rich.git" }
