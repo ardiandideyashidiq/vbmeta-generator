@@ -4,18 +4,6 @@
 
 `vbmeta-generator` is a self-contained Python CLI tool that takes a directory of raw Android partition images (`boot.img`, `dtbo.img`, `super.img`, etc.) and produces a complete set of signed AVB 2.0 verified boot images: `vbmeta.img`, `vbmeta_system.img`, `vbmeta_vendor.img`, a signed `boot.img`, and a rebuilt `super.img` with dm-verity hashtree footers on every system partition.
 
-All 24+ AOSP prebuilt binaries are bundled inside the Python package — install once, run anywhere.
-
-## Quick Start
-
-```bash
-# Install globally
-uv tool install /path/to/vbmeta-generator
-
-# Run against a ROM directory
-vbmeta-generator /path/to/ROM/ -o ./output -y
-```
-
 ## Installation
 
 ### Via `uv tool install` (recommended)
