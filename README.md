@@ -21,7 +21,12 @@ vbmeta-generator /path/to/ROM/ -o ./output -y
 ### Via `uv tool install` (recommended)
 
 ```bash
-uv tool install /path/to/vbmeta-generator
+# From a local path
+uv tool install .
+
+# From GitHub
+uv tool install git+https://github.com/ardiandideyashidiq/vbmeta-generator.git
+
 vbmeta-generator /path/to/ROM/ -y
 ```
 
